@@ -13,7 +13,7 @@ jobs:
      run: echo ${{ secret.DOCKER_PASSWORD }} | docker login -u ${{ secret.DOCKER_USERNAME }} --password-stdin
    - name: build an image
      run: docker build -d -t dockerimage .
-   - name: push image to dcoker hub
+   - name: push image to dcoker hubb
      run: docker run -d -p 8080:80 dockerimage
    - name: docker tag
      run: docker tag dockerimage:latest betrand1999/dockerimage:latest    
